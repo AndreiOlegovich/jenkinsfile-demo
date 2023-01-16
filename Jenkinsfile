@@ -2,10 +2,13 @@ pipeline {
     agent { 
         node {
             label 'docker_slave_ssh'
-            }
-      }
+        }
+    }
     triggers {
         pollSCM 'H/2 * * * *'
+    }
+    environment {
+        NEW_VERSION = '1.0.0'
     }
     stages {
         stage('Build') {
