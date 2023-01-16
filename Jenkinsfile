@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Test') {
             when {
-                expression { env.BRANCH_NAME == 'dev' || env.BRANCH_NAME == 'master' }
+                branch 'dev' || branch 'master'
             }
             steps {
                 echo "Testing.."
