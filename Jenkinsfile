@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Test') {
             when {
-                BRANCH_NAME == 'master'
+                expression { BRANCH_NAME == 'master' }
             }
             steps {
                 echo "Testing.."
