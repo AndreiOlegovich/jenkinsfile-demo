@@ -5,7 +5,7 @@ pipeline {
             }
       }
     triggers {
-        pollSCM 'H/2 * * * *'
+        pollSCM 'H/1 * * * *'
     }
     stages {
         stage('Build') {
@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Test') {
             when {
-                branch 'dev' || branch 'master'
+                branch 'master'
             }
             steps {
                 echo "Testing.."
