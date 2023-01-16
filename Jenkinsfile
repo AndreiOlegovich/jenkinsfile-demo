@@ -19,12 +19,13 @@ pipeline {
         }
         stage('Test') {
             when {
-                expression { BRANCH_NAME == 'master' }
+                expression { BRANCH_NAME == 'master' || BRANCH_NAME == 'dev' }
             }
             steps {
                 echo "Testing.."
                 sh '''
                 echo "doing test stuff.."
+                echo $BRANCH_NAME
                 '''
             }
         }
