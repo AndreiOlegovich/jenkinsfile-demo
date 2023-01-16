@@ -20,7 +20,7 @@ pipeline {
             when {
                 expression {
                     // env.BRANCH_NAME == 'dev'
-                    BRANCH_NAME == 'dev'
+                    BRANCH_NAME == 'dev' || BRANCH_NAME == 'master'
                 }
             }
             steps {
