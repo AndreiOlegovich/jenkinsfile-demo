@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Test') {
             when {
-                branch 'master'
+                BRANCH_NAME == 'master'
             }
             steps {
                 echo "Testing.."
