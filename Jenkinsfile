@@ -33,4 +33,16 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            echo "Executed no matter what happened in pipeline"
+        }
+        success {
+            echo "Executed if pipeline was successful"
+        }
+        failure {
+            echo "Executed if pipeline fails"
+        }
+
+    }
 }
