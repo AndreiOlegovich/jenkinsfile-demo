@@ -14,6 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building.."
+                echo "Building version ${NEW_VERSION}"
                 sh '''
                 echo "doing build stuff..."
                 env
