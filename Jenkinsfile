@@ -19,7 +19,7 @@ pipeline {
         stage('Test') {
             when {
                 expression {
-                    # env.BRANCH_NAME == 'dev'
+                    // env.BRANCH_NAME == 'dev'
                     BRANCH_NAME == 'dev'
                 }
             }
