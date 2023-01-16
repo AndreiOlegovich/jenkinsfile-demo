@@ -43,6 +43,5 @@ pipeline {
         failure {
             echo "Executed if pipeline fails"
         }
-
     }
 }
