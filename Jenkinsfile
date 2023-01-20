@@ -35,7 +35,7 @@ pipeline {
                     usernameVariable: USER_NAME,
                     passwordVariable: USER_PWD)])
                     {
-                        sh "USER: ${USER_NAME} PWD: ${USER_PWD}"
+                        echo "USER: ${USER_NAME} PWD: ${USER_PWD}"
                     }
                 }
             }
