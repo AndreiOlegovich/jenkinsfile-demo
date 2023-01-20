@@ -33,7 +33,7 @@ pipeline {
                 withCredentials([
                     usernamePassword(credentials: "esxi2-192", 
                     usernameVariable: USER,
-                    passwordVariable: PWD])
+                    passwordVariable: PWD)])
                     {
                         sh "USER: ${USER} PWD: ${PWD}"
                     }
