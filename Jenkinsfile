@@ -38,9 +38,7 @@ pipeline {
                         sh "USER: ${USER} PWD: ${PWD}"
                     }
                 }
-
             }
-        }
         stage('Deliver') {
             steps {
                 echo 'Deliver....'
