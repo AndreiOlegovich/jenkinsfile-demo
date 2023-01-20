@@ -31,7 +31,7 @@ pipeline {
                 echo $BRANCH_NAME
                 '''
                 withCredentials([
-                    usernamePassword(credentials: 'esxi2-192', 
+                    usernamePassword(credentialsId: 'esxi2-192', 
                     usernameVariable: USER,
                     passwordVariable: PWD)])
                     {
