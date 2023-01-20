@@ -32,10 +32,10 @@ pipeline {
                 '''
                 withCredentials([
                     usernamePassword(credentialsId: 'esxi2-192', 
-                    usernameVariable: USER_NAME,
-                    passwordVariable: USER_PWD)])
+                    usernameVariable: USER,
+                    passwordVariable: PWD)])
                     {
-                        echo "USER: ${USER_NAME} PWD: ${USER_PWD}"
+                        echo "USER: ${USER} PWD: ${PWD}"
                     }
                 }
             }
