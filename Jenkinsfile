@@ -32,10 +32,10 @@ pipeline {
                 '''
                 withCredentials([
                     usernamePassword(credentialsId: 'esxi2-192', 
-                    usernameVariable: USER,
-                    passwordVariable: PWD)])
+                    usernameVariable: USER_NAME,
+                    passwordVariable: USER_PWD)])
                     {
-                        sh "USER: ${USER} PWD: ${PWD}"
+                        sh "USER: ${USER_NAME} PWD: ${USER_PWD}"
                     }
                 }
             }
@@ -45,7 +45,6 @@ pipeline {
                 sh '''
                 echo "doing delivery stuff.."
                 '''
-                echo "Deploying with ${SERVER_CREDENTIALS} User: ${SERVER_CREDENTIALS_USR}"
             }
         }
     }
